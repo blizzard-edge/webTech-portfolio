@@ -26,7 +26,8 @@
 export function welcomeUser(name) {
     // TODO: Use template literals to create the welcome message
     // return `Welcome back, ${name}!`;
-}
+    return `Welcome back, ${name}!`;
+};
 
 /**
  * TODO 2: Template literal with multiple variables
@@ -39,7 +40,8 @@ export function welcomeUser(name) {
 export function formatUserInfo(user) {
     // TODO: Use template literals to format the user info
     // return `${user.name} (${user.age} years old) from ${user.city}`;
-}
+    return `${user.name} (${user.age} years old) from ${user.city}`;
+};
 
 /**
  * TODO 3: Template literal with expressions
@@ -53,9 +55,14 @@ export function formatUserInfo(user) {
 export function formatCartTotal(quantity, price) {
     // TODO: Calculate total and use template literals to format
     // const total = quantity * price;
+    const total = quantity * price;
+    
     // const roundedTotal = Math.round(total * 100) / 100;
+    const roundedTotal = Math.round(total * 100) / 100;
+    
     // return `${quantity} items × $${price} = $${roundedTotal}`;
-}
+    return `${quantity} items × $${price} = $${roundedTotal}`;
+};
 
 /**
  * TODO 4: Multi-line template literal
@@ -75,11 +82,13 @@ export function formatCartTotal(quantity, price) {
 export function createProductCard(product) {
     // TODO: Create multi-line HTML using template literals
     // return `<div class="product-card">
-    //   <h3>${product.name}</h3>
-    //   <p>$${product.price}</p>
-    //   <p>${product.description}</p>
-    // </div>`;
-}
+    return `<div class="product-card">
+
+    <h3>${product.name}</h3>
+    <p>$${product.price}</p>
+    <p>${product.description}</p>
+    </div>`;
+};
 
 /**
  * TODO 5: Template literal with conditional content
@@ -96,7 +105,8 @@ export function createProductCard(product) {
 export function formatTask(task) {
     // TODO: Use template literals with conditional content
     // return `${task.title}${task.dueDate ? ` (Due: ${task.dueDate})` : ''}`;
-}
+    return `${task.title}${task.dueDate ? ` (Due: ${task.dueDate})` : ''}`;
+};
 
 /**
  * TODO 6: Template literal for email generation
@@ -123,7 +133,15 @@ export function generatePasswordResetEmail(user, resetLink) {
     // 
     // Best regards,
     // The Team`;
-}
+   
+    return `Hi ${user.name},
+
+    Click the link below to reset your password:
+    ${resetLink}
+
+    Best regards,
+    The Team`;
+};
 
 /**
  * EXAMPLE FUNCTIONS - Already completed to show the pattern

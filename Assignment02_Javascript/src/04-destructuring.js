@@ -30,10 +30,12 @@
 export function extractUserInfo(user) {
     // TODO: Use object destructuring to extract name and email
     // const { name, email } = user;
-    
+    const { name, email } = user;
+
     // TODO: Return template literal with the extracted values
     // return `Hello ${name}, your email is ${email}`;
-}
+    return `Hello ${name}, your email is ${email}`;
+};
 
 /**
  * TODO 2: Destructuring with default values
@@ -46,10 +48,12 @@ export function extractUserInfo(user) {
 export function getUserRole(user) {
     // TODO: Destructure name and role (with default value 'guest')
     // const { name, role = 'guest' } = user;
+    const { name, role = 'guest' } = user;
     
     // TODO: Return message with name and role
     // return `${name} is a ${role}`;
-}
+    return `${name} is a ${role}`;
+};
 
 /**
  * TODO 3: Nested object destructuring
@@ -64,10 +68,12 @@ export function getUserRole(user) {
 export function extractUserCity(user) {
     // TODO: Use nested destructuring to extract city from user.address
     // const { address: { city } } = user;
+    const { address: { city } } = user;
     
     // TODO: Return message with city
     // return `User lives in ${city}`;
-}
+    return `User lives in ${city}`;
+};
 
 /**
  * TODO 4: Array destructuring
@@ -80,10 +86,12 @@ export function extractUserCity(user) {
 export function getFirstTwoItems(items) {
     // TODO: Use array destructuring to get first and second items
     // const [first, second] = items;
+    const [first, second] = items;
     
     // TODO: Return formatted string
     // return `First: ${first}, Second: ${second}`;
-}
+    return `First: ${first}, Second: ${second}`;
+};
 
 /**
  * TODO 5: Array destructuring with rest operator
@@ -96,11 +104,13 @@ export function getFirstTwoItems(items) {
 export function separateFirstFromRest(numbers) {
     // TODO: Destructure first number and rest of the array
     // const [first, ...rest] = numbers;
-    
+    const [first, ...rest] = numbers;
+
     // TODO: Return object with first and rest
     // return { first: first, rest: rest };
     // Or using shorthand: return { first, rest };
-}
+    return { first, rest };
+};
 
 /**
  * TODO 6: Destructuring in function parameters
@@ -118,7 +128,8 @@ export function formatProduct({ name, price, inStock = true }) {
     // TODO: Return formatted string showing product info
     // Include whether it's in stock or out of stock
     // return `${name} - ${price} (${inStock ? 'In Stock' : 'Out of Stock'})`;
-}
+    return `${name} - $${price.toFixed(2)} (${inStock ? 'In Stock' : 'Out of Stock'})`;
+};
 
 /**
  * TODO 7: Swapping variables with array destructuring
@@ -137,10 +148,12 @@ export function formatProduct({ name, price, inStock = true }) {
 export function swapValues(a, b) {
     // TODO: Use array destructuring to swap a and b
     // [a, b] = [b, a];
-    
+    [a, b] = [b, a];
+
     // TODO: Return the swapped values as an array
     // return [a, b];
-}
+    return [a, b];
+};
 
 /**
  * EXAMPLE FUNCTIONS - Already completed to show the pattern
