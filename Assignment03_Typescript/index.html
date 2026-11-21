@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TypeScript Data Explorer</title>
+</head>
+<body>
+<main class="container">
+<h1>TypeScript Data Explorer</h1>
+<section class="controls">
+<label>Search<input id="searchInput" type="search"></label>
+<label>Department<select id="departmentSelect">
+<option value="">All departments</option><option value="CS">CS</option><option value="MATH">MATH</option><option value="CYBR">CYBR</option><option value="ENGL">ENGL</option>
+</select></label>
+<label>Minimum rating<select id="ratingSelect">
+<option value="">Any rating</option><option value="3">3.0+</option><option value="4">4.0+</option><option value="4.5">4.5+</option>
+</select></label>
+<label class="checkbox"><input id="onlineOnly" type="checkbox"> Online only</label>
+<label>Sort<select id="sortSelect">
+<option value="title">Title</option><option value="rating">Rating</option><option value="enrollment">Enrollment</option>
+</select></label>
+<label class="checkbox"><input id="descending" type="checkbox"> Descending</label>
+</section>
+<section class="stats">
+<div><strong id="courseCount">0</strong><span>Courses</span></div>
+<div><strong id="averageRating">0</strong><span>Average rating</span></div>
+<div><strong id="totalEnrollment">0</strong><span>Total enrollment</span></div>
+</section>
+<p id="emptyMessage" hidden>No courses match the current criteria.</p>
+<table>
+<thead><tr><th>Code</th><th>Title</th><th>Department</th><th>Credits</th><th>Enrollment</th><th>Rating</th><th>Online</th></tr></thead>
+<tbody id="courseTableBody"></tbody>
+</table>
+</main>
+<script type="module" src="/src/app.ts"></script>
+</body>
+</html>
