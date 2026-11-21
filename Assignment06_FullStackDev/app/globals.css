@@ -1,0 +1,62 @@
+@import "tailwindcss";
+@import "@heroui/styles";
+
+/*
+* Author: John Morales
+* IDE: VSCode
+* Last Revision Date: November 20, 2026
+*/
+
+:root {
+  color-scheme: light;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.movie-list {
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  gap: 1rem;
+}
+
+input,
+select {
+  background-color: #ffffff;
+  border: 1px solid #d4d4d4;
+  border-radius: 0.375rem;
+  padding: 0.5rem 0.75rem;
+  margin-left: 0.5rem;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgb(99 102 241 / 0.25);
+}
+
+button {
+  background-color: #4f46e5;
+  color: #ffffff;
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #4338ca;
+}
+
